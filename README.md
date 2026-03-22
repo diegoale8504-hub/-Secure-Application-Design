@@ -173,9 +173,6 @@ nohup java -jar ~/Lab4-0.0.1-SNAPSHOT.jar \
 * **[DuckDNS](https://www.duckdns.org/)** - Free dynamic DNS
 * **[AWS EC2](https://aws.amazon.com/ec2/)** - Cloud infrastructure
 
-## Contributing
-
-Please read **CONTRIBUTING.md** for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -183,9 +180,7 @@ We use **[SemVer](http://semver.org/)** for versioning. For the versions availab
 
 ## Authors
 
-* **Diego Rozo** - *Initial work* - [GitHub](https://github.com/diegoale8504-hub)
-
-See also the list of **contributors** who participated in this project.
+* **Diego Rozo** 
 
 ## Acknowledgments
 
