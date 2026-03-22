@@ -1,7 +1,11 @@
 # Secure Application Design — Lab 4
 
 A secure web application with user authentication, HTTPS encrypted communication using Let's Encrypt certificates, deployed on two independent AWS EC2 servers: an Apache server serving the asynchronous HTML+JS client, and a Spring Boot server exposing the REST services.
-
+## Proofs:
+**Architecture**
+[Architecture](docs/architecture.md)
+Or u can download de document if u want.
+**Video**: https://youtu.be/B9iIWZz8qAs?si=q89upGymLlymHV5n
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See the **Deployment** section for notes on how to deploy the project on a live system.
@@ -102,6 +106,11 @@ mvn checkstyle:check
 ```
 
 ## Deployment
+![img.png](docs/images/img.png)
+![img_1.png](docs/images/img_1.png)
+![img_2.png](docs/images/img_2.png)
+![img_3.png](docs/images/img_3.png)
+![img_4.png](docs/images/img_4.png)
 
 ### Server requirements
 
