@@ -7,9 +7,6 @@ import java.util.Collections;
 
 @SpringBootApplication
 public class Secureweb {
-    public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(Secureweb.class);
-        app.setDefaultProperties(Collections.singletonMap("server.port", "5000"));
-        app.run(args);
-    }
+
+
 }

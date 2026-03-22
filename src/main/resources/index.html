@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure App</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 60px auto; }
+        input { display: block; margin: 8px 0; padding: 8px; width: 100%; box-sizing: border-box; }
+        button { padding: 10px 20px; margin: 4px; cursor: pointer; }
+        #result { margin-top: 20px; padding: 12px; background: #f0f0f0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+<h2>🔐 Secure Web App</h2>
+
+<input type="text" id="username" placeholder="Usuario" />
+<input type="password" id="password" placeholder="Contraseña" />
+
+<button onclick="register()">Registrar</button>
+<button onclick="login()">Login</button>
+
+<div id="result">Los resultados aparecerán aquí...</div>
+
+<script>
+    // Función auxiliar para llamadas async a la API
+    async function callApi(endpoint, username, password) {
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = 'Cargando...';
+
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            const text = await response.text();
+            resultDiv.textContent = `[${response.status}] ${text}`;
+        } catch (err) {
+            resultDiv.textContent = `Error: ${err.message}`;
+        }
+    }
+
+    function register() {
+        const u = document.getElementById('username').value;
+        const p = document.getElementById('password').value;
+        callApi('/auth/register', u, p);
+    }
+
+    function login() {
+        const u = document.getElementById('username').value;
+        const p = document.getElementById('password').value;
+        callApi('/auth/login', u, p);
+    }
+</script>
+</body>
+</html>
